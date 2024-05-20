@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\Developer\\Documents\\Developments\\Api-Node-TypeORM-Crud\\src\\logs\\debug\\.d80e16b8e0cb1ca3307b88f4a316540306c2e308-audit.json",
+    "files": [
+        {
+            "date": 1716173762880,
+            "name": "C:\\Users\\Developer\\Documents\\Developments\\Api-Node-TypeORM-Crud\\src\\logs\\debug\\2024-05-19.log",
+            "hash": "3406ae6613dadb639f77f950a854ef6f60abae0dfb390edf475f586af8bad012"
+        },
+        {
+            "date": 1716174037761,
+            "name": "C:\\Users\\Developer\\Documents\\Developments\\Api-Node-TypeORM-Crud\\src\\logs\\debug\\2024-05-20.log",
+            "hash": "41d0bb66cc92981af288ffb69f0d806f61e639bc707c4419e921b77d731eccb6"
+        }
+    ],
+    "hashType": "sha256"
+}

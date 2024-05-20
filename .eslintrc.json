@@ -1,0 +1,14 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Desactiva la regla que exige tipos explícitos para las funciones y métodos
+    "@typescript-eslint/no-explicit-any": "off" // Desactiva la regla que prohíbe el uso del tipo 'any'
+  }
+}
