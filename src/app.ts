@@ -7,9 +7,9 @@ import morgan from "morgan";
 import cors from "cors";
 import hpp from "hpp";
 import helmet from "helmet";
-import cookieParser from 'cookie-parser'
-import  corsConfig  from "./config/cors.config";
-import  {stream}  from './utilities/logger'
+import cookieParser from 'cookie-parser';
+import corsConfig from "./config/cors.config";
+import { stream } from './utilities/logger';
 
 class App {
   public app: express.Application;
@@ -22,23 +22,17 @@ class App {
     this.env = NODE_ENV || "development";
     this.port = Number(PORT) || 5000;
 
+    this.initializeMiddlewares(); // Mover esta línea antes de las rutas
     this.initializeRoute(routes);
     this.connectToDatabase();
     this.initializeSwagger();
-    this.initializeMiddlewares();
     this.initializeErrorHandlers();
   }
 
-  /**
-   * getServer
-   */
   public getServer() {
     return this.app;
   }
 
-  /**
-   * closeServer
-don?:any   */
   public closeServer(done?: any) {
     this.server = this.app.listen(this.port, () => {
       done();
@@ -51,16 +45,11 @@ don?:any   */
     });
   }
 
-  /**
-   * connectToDatabase
-   */
-  private connectToDatabase() {}
+  private connectToDatabase() {
+ 
+  }
 
-  /**
-   * initialiteMiddlewares
-   */
   private initializeMiddlewares() {
-
     this.app.use(morgan(LOG_FORMAT ?? '../logs', { stream }));
     this.app.use(cors(corsConfig));
     this.app.use(hpp());
@@ -68,17 +57,10 @@ don?:any   */
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
-
   }
 
-  /**
-   * initialiteSwagger
-   */
   private initializeSwagger() {}
 
-  /**
-   * initialiteErrorHandlers
-   */
   public initializeErrorHandlers() {}
 
   public listen() {
@@ -91,5 +73,6 @@ don?:any   */
     });
   }
 }
+
 
 export default App;

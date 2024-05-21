@@ -31,8 +31,9 @@ class userRoutes implements Routes {
     })
 
     this.router.post(`${this.path}/create`, (req:Request, res: Response)=>{
-      const { body:userBody } = req;
-      console.log('cuerpo de la peticion: ', userBody)
+      const { id: userId }= req.params;
+      const { body: userBody } = req;
+      console.log('Parametro & body: ', userId, userBody)
       return res.status(200).json({
         ok:true,
         message: ">>>Usuario creado satisfactoriamente!"
@@ -40,8 +41,9 @@ class userRoutes implements Routes {
     })
 
     this.router.put(`${this.path}/update/:id`, (req:Request, res: Response)=>{
-      const { id: userId } = req.params;
-      console.log('Parametro del Request: ', userId)
+      const { id: userId }= req.params;
+      const { body: userBody } = req;
+      console.log('Parametro & body: ', userId, userBody)
       return res.status(200).json({
         ok:true,
         message: ">>>Usuario modificado satisfactoriamente!"
@@ -49,8 +51,9 @@ class userRoutes implements Routes {
     })
 
     this.router.delete(`${this.path}/delete/:id`, (req:Request, res: Response)=>{
-      const { id: userId } = req.params;
-      console.log('Parametro del Request: ', userId)
+      const { id: userId }= req.params;
+      const { body: userBody } = req;
+      console.log('Parametro & body: ', userId, userBody)
       return res.status(200).json({
         ok:true,
         message: ">>>Usuario eliminado satisfactoriamente!"
