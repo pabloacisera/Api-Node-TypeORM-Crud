@@ -11,6 +11,7 @@ import cookieParser from 'cookie-parser';
 import corsConfig from "./config/cors.config";
 import { stream } from './utilities/logger';
 
+
 class App {
   public app: express.Application;
   public env: string;
@@ -46,8 +47,10 @@ class App {
   }
 
   private connectToDatabase() {
- 
+   
   }
+  
+  
 
   private initializeMiddlewares() {
     this.app.use(morgan(LOG_FORMAT ?? '../logs', { stream }));

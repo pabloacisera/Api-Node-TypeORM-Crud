@@ -1,0 +1,16 @@
+2024-05-21 19:45:28 error: uncaughtException: listen EADDRINUSE: address already in use :::5000
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1897:16)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2037:7)
+    at Function.listen (C:\Users\Developer\Documents\Developments\Api-Node-TypeORM-Crud\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Developer\Documents\Developments\Api-Node-TypeORM-Crud\src\app.ts:67:14)
+    at Object.<anonymous> (C:\Users\Developer\Documents\Developments\Api-Node-TypeORM-Crud\src\index.ts:7:5)
+    at Module._compile (node:internal/modules/cjs/loader:1368:14)
+    at Module._compile (C:\Users\Developer\Documents\Developments\Api-Node-TypeORM-Crud\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\DEVELO~1\AppData\Local\Temp\ts-node-dev-hook-8880891894985554.js:69:33)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1426:10)
+2024-05-21 20:06:34 error: Database connection error:
+2024-05-21 20:16:18 error: Database connection error:
+2024-05-21 20:18:11 error: Database connection error:
+2024-05-21 20:24:15 error: Database connection error:
